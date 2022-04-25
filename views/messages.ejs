@@ -1,0 +1,21 @@
+<% if (err_msg!="") { %>
+    <h5 class="alert-msg">'Error:',<%=err_msg%> </h5>
+<% } %>
+<% if (success_msg!="") { %>
+    <h5 class="alert-msg">'Congrats!: ',<%=success_msg%> </h5>
+<% } %>
+<% if (error!="") { %>
+    <h5 class="alert-msg">'Error Message: ',<%=error%> </h5>
+<% } %>
+
+
+<script>
+    let alertmsg=document.querySelector('.alert-msg')
+    if (alertmsg) {
+        setTimeout(()=>{
+            alertmsg.style.display='none'
+        },1500)
+        
+    }
+
+</script>
